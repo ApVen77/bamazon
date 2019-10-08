@@ -8,48 +8,41 @@ USE bamazon_db;
 
 -- Creates the table "people" within animals_db --
 CREATE TABLE product (
-  -- Makes an numeric column --
-  item_id INTEGER(10),
-  -- Makes a string column called "name" which cannot contain null --
-  products VARCHAR(30) NOT NULL,
-  -- Makes a sting column called "pet_name" --
-  department_name VARCHAR(30),
-  -- Makes an numeric column--
-  price INTEGER(10),
--- Makes a string column called "name" which cannot contain null --
-  stock_quantity INTEGER (10)
-);
+  item_id INTEGER(10) NOT NULL,
+  products VARCHAR (100),
+  departmentName VARCHAR(100),
+  price VARCHAR(100),
+  stock_quantity VARCHAR(10)
+); 
+INSERT INTO product (item_id, products, departmentName, price, stock_quantity)
+VALUES (1, "Decent Healthcare", "Employee", "join a trash clean up", 100);
 
--- Creates new rows containing data in all named columns --
-INSERT INTO product (products, item_id, department_name, price, stock_quantity)
-VALUES (1, "Decent Healthcare", "Employee", "Rockington", 100);
+INSERT INTO product ( item_id, products,  departmentName, price, stock_quantity)
+VALUES (2, "Dental Insurance", "Employee", "volunteer", 10);
 
-INSERT INTO product (products, item_id, department_name, price, stock_quantity)
-VALUES (2, "Dental Insurance", "Employee", "Rockington", 100);
+INSERT INTO product (item_id, products,  departmentName, price, stock_quantity)
+VALUES (3, "Maternity Leave", "Employee", "give away unused clothes", 10);
 
-INSERT INTO product (products, item_id, department_name, price, stock_quantity)
-VALUES (3, "Maternity Leave", "Employee", "Misty", 10);
+INSERT INTO product (item_id, products,  departmentName, price, stock_quantity)
+VALUES (4, "Paid time off", "Employee", "help the elderly", 10);
 
-INSERT INTO product (products, item_id, department_name, price, stock_quantity)
-VALUES (4, "Paid time off", "Employee");
+INSERT INTO product (item_id, products,  departmentName, price, stock_quantity)
+VALUES (5, "Paternity Leave", "Employee", "register voters", 100);
 
-INSERT INTO product (products, item_id, department_name, price, stock_quantity)
-VALUES (5, "Paternity Leave", "Employee");
+INSERT INTO product (item_id, products,  departmentName, price, stock_quantity)
+VALUES (6, "Livable Wage", "Employee", "visit a sick kid", 20);
 
-INSERT INTO product (products, item_id, department_name, price, stock_quantity)
-VALUES (6, "Livable Wage", "Employee");
+INSERT INTO product (item_id, products,  departmentName, price, stock_quantity)
+VALUES (7, "Professional Growth", "Employee", "learn somthing new", 10);
 
-INSERT INTO product (products, item_id, department_name, price, stock_quantity)
-VALUES (7, "Professional Growth", "Employee");
+INSERT INTO product (item_id, products, departmentName, price, stock_quantity)
+VALUES (8, "Incentive Package", "Employee", "give up social media", 10);
 
-INSERT INTO product (products, item_id, department_name, price, stock_quantity)
-VALUES (8, "Incentive Package", "Employee");
+INSERT INTO product (item_id, products,  departmentName, price, stock_quantity)
+VALUES (9, "Bi-annual Bonus", "Employee", "walk in someone else's shoes", 10);
 
-INSERT INTO product (products, item_id, department_name, price, stock_quantity)
-VALUES (9, "Bi-annual Bonus", "Employee");
-
-INSERT INTO product (products, item_id, department_name, price, stock_quantity)
-VALUES (10, "Larger Employee Discount", "Employee");
+INSERT INTO product  (item_id, products, departmentName, price, stock_quantity)
+VALUES (10, "50% Employee Discount", "Employee", "be a yes man", 10);
 
 -- Updates the row where the column name is peter --
 -- UPDATE product 
