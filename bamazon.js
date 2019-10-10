@@ -32,7 +32,7 @@ function viewAll() {     ////////inquirer begins////////
                     askForID(data);
 
                 });
-                
+
             } else {
                 console.log("Please return for some employeer rights ANYTIME!")
             }
@@ -84,6 +84,7 @@ function askForQuantity(product) {
         //update quantity table//
     ]).then(function (answer) {
         var userQuantity = answer.qty;
+        // var totalCost = 
         if (userQuantity > product.stock_quantity) {
             console.log('Insufficient Quantity');
             console.log('Cannot place this order');
@@ -91,8 +92,8 @@ function askForQuantity(product) {
             viewAll();
         }
         else {
-          
-          
+
+
             connection.query('UPDATE products SET stock_quantity = stock_quantity - ? WHERE item_id = ?', [userQuantity, product.item_id
             ], function (err, res) {
 
@@ -116,21 +117,27 @@ function checkForId(id, data) {
 }
 
 //Allows the user to place a new order or end the connection
+
 function newOrder() {
     inquirer.prompt([{
         type: 'confirm',
         name: 'choice',
         message: 'Would you like to place another order?'
+
     }]).then(function (answer) {
+        var quantityToBuy = parseInt(answer.qty);
+        var whatToBuy = (answer. id)-1; 
+        var totalCost =  (parseFloat(((product[whatToBuy].price) *quantityToBuy).toFixed(2)))
         if (answer.choice) {
-            viewAll();
-        }
+            console.log("Thank you for shopping, your total is:" + totalCost.toFixed(2));
+}
         else {
-            console.log('Hope to see you soon!');
-            connection.end();
-        }
-    })
-};
+    console.log('Hope to see you soon!');
+    connection.end();
+}
+    }
+        )};
+
 
 
 
