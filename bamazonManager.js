@@ -16,16 +16,15 @@ connection.connect(function (err) {
     viewAll();
 })
 
-function viewAll() {     ////////inquirer begins////////
+function viewAll() {     ////////display products////////
     inquirer.prompt([
         {
-            type: "confirm",
-            name: "confirm",
-            message: "Welcome to BAMAZON! The Specail Store for Employees!!! Would you like to shop around?",
-            default: true
-
+            type: "list",
+            name: "list",
+            message: "Hello Manager! What would you like to see today?",
+            choices: ["View products for sale", "View low inventory", "Add to inventory", "Add new Products"]
         }]).then(function (user) {
-            if (user.confirm === true) {
+            if (user.list === "View products for sale") {
                 connection.query("SELECT * FROM product", function (err, data) {
                     if (err) throw err;
                     console.table(data);
@@ -34,17 +33,17 @@ function viewAll() {     ////////inquirer begins////////
                 });
 
             } else {
-                console.log("Please return for some employeer rights ANYTIME!")
+                console.log("Select another choice?")
             }
         })
 }
 
-function askForID(data) {
+function askForID(data) {   //Match user input to ID//
     inquirer.prompt([
         {
             type: "input",
             name: "id",
-            message: "What is the ID of the product you'd like to get?",
+            message: "What product would you like to see?",
             validate: function (value) {
                 if (isNaN(value)) {
                     return false;
@@ -57,17 +56,18 @@ function askForID(data) {
         var userEnteredId = parseInt(answer.id);
         console.log("user id: " + userEnteredId)
         var product = checkForId(userEnteredId, data);
-        console.log("product : ",  product)
+        console.log("product : ", product)
+        console.log("quantity : ", qty)
         if (product) {
             askForQuantity(product);
         } else {
-            console.log("Sorry not availiable!")
+            console.log("Sorry information not availiable")
             viewAll();
         }
 
     });
 }
-function askForQuantity(product) {
+function askForQuantity(product) {  //inventory decreases//
     inquirer.prompt([
         {
             type: "input",
@@ -116,9 +116,9 @@ function checkForId(id, data) {
     return null;
 }
 
-//Allows the user to place a new order or end the connection
 
-function newOrder() {
+
+function newOrder() { //Allows the user to place a new order or end the connection//
     inquirer.prompt([{
         type: 'confirm',
         name: 'choice',
@@ -126,26 +126,25 @@ function newOrder() {
 
     }]).then(function (answer) {
         var quantityToBuy = parseInt(answer.qty);
-        var whatToBuy = (answer. id)-1; 
-        var totalCost =  (answer.price)
+        var whatToBuy = (answer.id) - 1;
+        var totalCost = (answer.price)
         if (answer.choice) {
             console.log("Thank you for shopping, your total is:" + totalCost.toFixed(2));
-}    //greatBAY// //loop// ///find object whose ID matches//  
+        }
         else {
-    console.log('Hope to see you soon!');
-    connection.end();
-}
+            console.log('Hope to see you soon!');
+            connection.end();
+        }
     }
-        )};
+    )
+};
 
 
 
 
-// var userEnteredId = answer.id;
-// var product = checkForId(userEnteredId, data);
-// if (product) {
-//     askForQuantity(product);
-// } console.log("")viewAll();
+
+
+
 
 
 

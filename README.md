@@ -21,27 +21,29 @@ This application will be creating an Amazon-like storefront with the MySQL datab
 
 Prompt | Image
 ---------------
-
-You will be promted  to shop in | ![Prompt 1](/image/ifYes.png)
-the Bamazon Store.                |
-If 'yes' is selected, you'll      |
-be shown a response.              |
+You will be prompted to shop     |   ![Prompt 2](/images/ifNo.png)
+at the Bamazon Employee Store.   |
+If 'no' is selected, you'll      |
+be shown a response.             |
+                                 |
 -------------------------------------------------------------------
-If 'no' is selected, you'll be  | ![Prompt 2](/images/ifNo.png)
-push to the next prompt to select |
-the ID   for the product.         |
+You will be promted  to shop in   | ![Prompt 1](/image/ifYes.png)
+the Bamazon Employee Store.       |
+If 'yes' is selected, you'll be   |
+pushed to the next prompt to      |
+select the ID for the product.    |
 -------------------------------------------------------------------
-After the ID is chosen for the   | ![Prompt 3](/images/priceSummary.png)
-product, stock quantity will check  |
-for availibity and display the      |
-completion of the purchase and the  |
-cost.                               |
+After the ID is chosen for the    | ![Prompt 3](/images/priceSummary.png)
+product, stock quantity will check|
+for availibity and display the    |
+completion of the purchase and the|
+cost.                             |
 ---------------------------------------------------------------------
 The stock quantity will decrease  | ![Prompt 4](/images/decrease.png)
-from the original inventory if a    |
-purchase is made.                   |
+from the original inventory if a  |
+purchase is made.                 |
 --------------------------------------------------------------------
 Once prompts are completed, a     |![GitHub Logo](/images/message2.png)
-message will complete the           |
-tranaction.                         |
+message will complete the         |
+tranaction.                       |
 --------------------------------------------------------------------
