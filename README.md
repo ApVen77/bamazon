@@ -19,31 +19,35 @@ This application will be creating an Amazon-like storefront with the MySQL datab
 
 ### Bamazon_App
 
-Prompt | Image
+| Prompt | Image
 ---------------
-You will be prompted to shop     |   ![Prompt 2](/image/ifNo.png)
-at the Bamazon Employee Store.   |
-If 'no' is selected, you'll      |
-be shown a response.             |
-                                 |
+| You will be prompted to shop     |   
+| at the Bamazon Employee Store.   |    i. 
+| If 'no' is selected, you'll      |
+| be shown a response.             |
+|  ![Prompt 2](/image/ifNo.png)                              
 -------------------------------------------------------------------
-You will be promted  to shop in   | ![Prompt 1](/image/ifYes.png)
-the Bamazon Employee Store.       |
+You will be promted  to shop in   | 
+the Bamazon Employee Store.       |   ii.
 If 'yes' is selected, you'll be   |
 pushed to the next prompt to      |
-select the ID for the product.    |
+select the ID for the product. 
+![Prompt 1](/image/ifYes.png)|
 -------------------------------------------------------------------
-After the ID is chosen for the    | ![Prompt 3](/image/priceSummary.png)
+After the ID is chosen for the    |
 product, stock quantity will check|
-for availibity and display the    |
+for availibity and display the    |  iii.
 completion of the purchase and the|
-cost.                             |
+cost.                        
+![Prompt 3](/image/priceSummary.png)|
 ---------------------------------------------------------------------
-The stock quantity will decrease  | ![Prompt 4](/image/decrease.png)
-from the original inventory if a  |
-purchase is made.                 |
+The stock quantity will decrease  | 
+from the original inventory if a  |    iv.
+purchase is made.    
+![Prompt 4](/image/decrease.png)  |
 --------------------------------------------------------------------
-Once prompts are completed, a     |![GitHub Logo](/image/message2.png)
+Once prompts are completed, a     |
 message will complete the         |
-tranaction.                       |
+tranaction.     
+![GitHub Logo](/image/message2.png)|
 --------------------------------------------------------------------
