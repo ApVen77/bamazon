@@ -21,7 +21,7 @@ function viewAll() {     ////////inquirer begins////////
         {
             type: "confirm",
             name: "confirm",
-            message: "Welcome to BAMAZON! The Specail Store for Employees Would you like to shop around?",
+            message: "Welcome to BAMAZON! The Specail Store for Employees!!! Would you like to shop around?",
             default: true
 
         }]).then(function (user) {
@@ -57,7 +57,7 @@ function askForID(data) {
         var userEnteredId = parseInt(answer.id);
         console.log("user id: " + userEnteredId)
         var product = checkForId(userEnteredId, data);
-        console.log("product : " + product)
+        console.log("product : ",  product)
         if (product) {
             askForQuantity(product);
         } else {
@@ -127,10 +127,10 @@ function newOrder() {
     }]).then(function (answer) {
         var quantityToBuy = parseInt(answer.qty);
         var whatToBuy = (answer. id)-1; 
-        var totalCost =  (parseFloat(((product[whatToBuy].price) *quantityToBuy).toFixed(2)))
+        var totalCost =  (answer.price)
         if (answer.choice) {
             console.log("Thank you for shopping, your total is:" + totalCost.toFixed(2));
-}
+}    //greatBAY// //loop// ///find object whose ID matches//  
         else {
     console.log('Hope to see you soon!');
     connection.end();

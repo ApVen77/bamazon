@@ -22,26 +22,26 @@ This application will be creating an Amazon-like storefront with the MySQL datab
 Prompt | Image
 ---------------
 
-* You will be promted  to shop in | ![GitHub Logo](/images/logo.png)
+You will be promted  to shop in | ![Prompt 1](/image/ifYes.png)
 the Bamazon Store.                |
-If 'no' is selected, you'll       |
+If 'yes' is selected, you'll      |
 be shown a response.              |
 -------------------------------------------------------------------
-* If 'yes' is selected, you'll be  | ![GitHub Logo](/images/logo.png)
-push to the next prompt to select  |
-the ID   for the product.          |
+If 'no' is selected, you'll be  | ![Prompt 2](/images/ifNo.png)
+push to the next prompt to select |
+the ID   for the product.         |
 -------------------------------------------------------------------
-* After the ID is chosen for the    | ![GitHub Logo](/images/logo.png)
+After the ID is chosen for the   | ![Prompt 3](/images/priceSummary.png)
 product, stock quantity will check  |
 for availibity and display the      |
 completion of the purchase and the  |
 cost.                               |
 ---------------------------------------------------------------------
-* The stock quantity will decrease  | ![GitHub Logo](/images/logo.png)
+The stock quantity will decrease  | ![Prompt 4](/images/decrease.png)
 from the original inventory if a    |
 purchase is made.                   |
 --------------------------------------------------------------------
-* Once prompts are completed, a     |![GitHub Logo](/images/logo.png)
+Once prompts are completed, a     |![GitHub Logo](/images/message2.png)
 message will complete the           |
 tranaction.                         |
 --------------------------------------------------------------------
